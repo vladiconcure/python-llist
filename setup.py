@@ -12,7 +12,7 @@ sources = [
 
 ext_modules = [
     Extension(
-        'llist._llist',
+        'llistplus._llist',
         sources=sources,
         include_dirs=['src/c_extension'],
     )

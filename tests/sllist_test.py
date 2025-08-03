@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from llist_test_case import LListTestCase
 from py23_utils import py23_cmp, py23_range, py23_xrange
 
-from llist import sllist, sllistnode
+from llistplus import sllist, sllistnode
 
 
 class testsllist(LListTestCase):

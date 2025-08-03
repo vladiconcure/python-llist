@@ -1,9 +1,9 @@
-llist - linked lists for CPython
-================================
+llistplus - enhanced linked lists for Python  
+============================================
 
-llist is an extension module for CPython providing basic linked list
-data structures.
-Collections implemented in the llist module perform well in problems
+llistplus is an enhanced extension module providing high-performance linked list
+data structures with automatic fallback between C and pure Python implementations.
+Collections implemented in the llistplus module perform well in problems
 which rely on fast insertions and/or deletions of elements in
 the middle of a sequence.
 For this kind of workload, they can be significantly faster than
@@ -22,19 +22,33 @@ with the following improvements:
 - **✅ Full Compatibility**: Zero breaking changes - all existing code works unchanged
 - **🔧 Enhanced API**: Pure Python version now includes all iterator classes (`dllistiterator`, `sllistnodeiterator`, etc.)
 
-Use `llist.using_c_extension()` to check which implementation is active.
+Use `llistplus.using_c_extension()` to check which implementation is active.
 
 This extension requires Python 3.7 or newer. The package automatically provides both fast C extension and pure Python fallback implementations with identical APIs.
 
-Currently llist provides the following types of linked lists:
+**Installation and Usage:**
+
+```python
+# Install the enhanced package
+pip install llistplus
+
+# Import the enhanced linked lists
+from llistplus import dllist, sllist
+
+# Check which implementation is active  
+import llistplus
+print("Using C extension:", llistplus.using_c_extension())
+```
+
+Currently llistplus provides the following types of linked lists:
  - dllist - a doubly linked list
  - sllist - a singly linked list
 
 Full documentation of these classes is available at:
 https://ajakubek.github.io/python-llist/index.html
 
-To install this package, run "pip install llist".
-Alternatively you can also download it manually from http://pypi.python.org/pypi, unpack into a directory and build/install with the following commands:
+To install this package, run "pip install llistplus".  
+Alternatively you can build and install from source with the following commands:
 ```
 python -m build
 pip install .

@@ -6,16 +6,16 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "llist"
+name = "llistplus"
 dynamic = ["version"]
-description = "Linked list data structures for Python"
+description = "Enhanced linked list data structures for Python with automatic C/Python fallback"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
     {name = "Adam Jakubek", email = "ajakubek@gmail.com"},
     {name = "Rafał Gałczyński", email = "rafal.galczynski@gmail.com"},
 ]
-keywords = ["linked list", "list", "data structures"]
+keywords = ["linked list", "list", "data structures", "enhanced", "fallback", "c extension"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -44,10 +44,10 @@ Repository = "https://github.com/ajakubek/python-llist"
 Issues = "https://github.com/ajakubek/python-llist/issues"
 
 [tool.setuptools]
-packages = ["llist", "llist._pure"]
+packages = ["llistplus", "llistplus._pure"]
 
 [tool.setuptools.package-data]
-llist = ["_llist.pyi", "py.typed"]
+llistplus = ["_llist.pyi", "py.typed"]
 
 [tool.setuptools.dynamic]
-version = {attr = "llist.__version__"}
+version = {attr = "llistplus.__version__"}

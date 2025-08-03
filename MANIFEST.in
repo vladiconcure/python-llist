@@ -1,6 +1,6 @@
 include Makefile CHANGES LICENSE MANIFEST MANIFEST.in README.md pyproject.toml
 recursive-include src/c_extension *.c *.h
-recursive-include llist *.py *.pyi *.so
+recursive-include llistplus *.py *.pyi *.so
 recursive-include docs *.py *.rst
 include docs/Makefile docs/make.bat
 graft docs/_static

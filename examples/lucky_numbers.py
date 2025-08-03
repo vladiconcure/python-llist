@@ -8,7 +8,7 @@ from container, which is much faster with linked lists.
 """
 
 from collections import deque
-from llist import dllist
+from llistplus import dllist
 import sys
 import timeit
 

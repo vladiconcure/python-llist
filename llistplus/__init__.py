@@ -1,6 +1,6 @@
 """
-llist - linked lists for Python
-================================
+llistplus - enhanced linked lists for Python
+=============================================
 
 This module provides doubly-linked lists (dllist) and singly-linked lists (sllist).
 It automatically uses the fast C extension if available, or falls back to pure Python.
@@ -10,7 +10,7 @@ from ._version import __version__
 
 # Try to import the fast C extension first
 try:
-    from llist._llist import (
+    from llistplus._llist import (
         dllist,
         dllistnode, 
         dllistiterator,
@@ -25,7 +25,7 @@ except ImportError:
     # Fall back to pure Python implementation
     import warnings
     warnings.warn(
-        "C extension for llist not found, using pure Python implementation. "
+        "C extension for llistplus not found, using pure Python implementation. "
         "For better performance, install the C extension.",
         ImportWarning
     )

@@ -1,7 +1,12 @@
 MANIFEST
-build
-dist
-*.egg-info
-*.pyc
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*$py.class
 *.so
 *.swp
+.idea/
+.vscode/
+*.bak

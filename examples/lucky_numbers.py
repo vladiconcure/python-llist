@@ -10,7 +10,7 @@ from container, which is much faster with linked lists.
 from collections import deque
 from llist import dllist
 import sys
-import time
+import timeit
 
 N = 128 * 1024
 
@@ -58,9 +58,9 @@ def generate_lucky_list(max_num):
 
 
 def time_execution(bench_func):
-    start_time = time.clock()
+    start_time = timeit.default_timer()
     result = bench_func()
-    elapsed = time.clock() - start_time
+    elapsed = timeit.default_timer() - start_time
     return (result, elapsed)
 
 

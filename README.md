@@ -9,11 +9,22 @@ the middle of a sequence.
 For this kind of workload, they can be significantly faster than
 collections.deque or standard Python lists.
 
-This extension requires CPython 2.7 or newer (3.x is supported).
-If you are looking for an implementation of linked lists in pure Python,
-visit http://github.com/rgsoda/pypy-llist/
-The pypy-llist module has the same API as this extension, but is
-significantly slower in CPython.
+## Enhanced Fork Features
+
+This is an enhanced fork of the original:
+- [python-llist](https://github.com/ajakubek/python-llist)      
+- [pypy-llist/](http://github.com/rgsoda/pypy-llist/)     
+with the following improvements:
+
+- **🔄 Automatic Fallback**: Seamlessly falls back to pure Python implementation when C extension fails to build/import
+- **📦 Modern Build System**: Uses `pyproject.toml` with proper dependencies and build configuration  
+- **🏗️ Unified Structure**: Clean project organization with both C and Python implementations in one package
+- **✅ Full Compatibility**: Zero breaking changes - all existing code works unchanged
+- **🔧 Enhanced API**: Pure Python version now includes all iterator classes (`dllistiterator`, `sllistnodeiterator`, etc.)
+
+Use `llist.using_c_extension()` to check which implementation is active.
+
+This extension requires Python 3.7 or newer. The package automatically provides both fast C extension and pure Python fallback implementations with identical APIs.
 
 Currently llist provides the following types of linked lists:
  - dllist - a doubly linked list

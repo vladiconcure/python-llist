@@ -1,0 +1,53 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llist"
+dynamic = ["version"]
+description = "Linked list data structures for Python"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Adam Jakubek", email = "ajakubek@gmail.com"},
+    {name = "Rafał Gałczyński", email = "rafal.galczynski@gmail.com"},
+]
+keywords = ["linked list", "list", "data structures"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ajakubek/python-llist"
+Documentation = "https://ajakubek.github.io/python-llist/index.html"
+Repository = "https://github.com/ajakubek/python-llist"
+Issues = "https://github.com/ajakubek/python-llist/issues"
+
+[tool.setuptools]
+packages = ["llist", "llist._pure"]
+
+[tool.setuptools.package-data]
+llist = ["_llist.pyi", "py.typed"]
+
+[tool.setuptools.dynamic]
+version = {attr = "llist.__version__"}

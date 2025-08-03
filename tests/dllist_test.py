@@ -2,6 +2,10 @@
 # -*- coding: utf-8 -*-
 import sys
 import weakref
+import os
+
+# ugly kludge: Add tests directory to path for local imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from llist_test_case import LListTestCase
 from py23_utils import py23_cmp, py23_range, py23_xrange
@@ -1388,3 +1392,6 @@ class testdllist(LListTestCase):
                 del ll
 
         self.assertStableRefCount(create_and_free_lists, None)
+
+if __name__ == '__main__':
+    unittest.main()

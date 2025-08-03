@@ -1,4 +1,4 @@
-llist - linked lists for CPython
+llist - linked lists for CPython (fork)
 ================================
 
 llist is an extension module for CPython providing basic linked list
@@ -9,7 +9,18 @@ the middle of a sequence.
 For this kind of workload, they can be significantly faster than
 collections.deque or standard Python lists.
 
-## Enhanced Fork Features
+## Fork installation
+
+install with preserving the original package name:
+```bash
+pip install git+https://github.com/vladiconcure/python-llist
+```
+install with a new package name(llistplus) to avoid conflicts with the original package:
+```bash
+pip install git+https://github.com/vladiconcure/python-llist@rename/llistplus
+```
+
+## Fork Features
 
 This is an enhanced fork of the original:
 - [python-llist](https://github.com/ajakubek/python-llist)      
